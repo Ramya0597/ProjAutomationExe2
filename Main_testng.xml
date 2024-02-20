@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Test">
+    <classes>
+      <class name="automation.ContactUs"/>
+      <class name="automation.ProductQuantityInCart"/>
+      <class name="automation.AddProductCart"/>
+      <class name="automation.AddressDetailsCheckoutPage"/>
+      <class name="automation.ViewCartBrandProducts"/>
+      <class name="automation.SearchProduct"/>
+      <class name="automation.LogoutUser"/>
+      <class name="automation.ExistingEmail"/>
+      <class name="automation.InvalidEmailandPassword"/>
+      <class name="automation.Subscription"/>
+      <class name="automation.ScrollUpUsingArrowBtn"/>
+      <class name="automation.RemoveProductsFromCart"/>
+      <class name="automation.ScrollUpWithoutArrow"/>
+      <class name="automation.ViewAllProductsandDetailsPage"/>
+      <class name="automation.AddReviewOnProduct"/>
+      <class name="automation.TestCasesPage"/>
+      <class name="automation.RegisterUser"/>
+      <class name="automation.SubscriptionCartPage"/>
+      <class name="automation.SearchProductsVerifyCartAfterLogin"/>
+      <class name="automation.ValidEmailandPassword"/>
+      <class name="automation.AddCartRecommendedItems"/>
+      <class name="automation.DownloadInvoiceAfterPO"/>
+      <class name="automation.LoginBeforeCheckout"/>
+      <class name="automation.CategoryProducts"/>
+      <class name="automation.RegisterWhileCheckout"/>
+      <class name="automation.RegisterBeforeCheckout"/>
+      
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
