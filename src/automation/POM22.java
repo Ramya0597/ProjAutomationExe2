@@ -18,7 +18,7 @@ public class POM22 {
 	WebElement recommendedItems;
 	@FindBy(xpath = "//*[@id='recommended-item-carousel']/div/div[2]/div[1]/div/div/div/a")
 	WebElement stylishDressRI;
-	@FindBy(xpath = "//u[text()='View Cart']")
+	@FindBy(xpath = "//div[@id='cartModal']//a[@href='/view_cart']")
 	WebElement viewCartRI;
 	@FindBy(xpath = "//a[text()='Stylish Dress']")
 	WebElement specificProductRI;
