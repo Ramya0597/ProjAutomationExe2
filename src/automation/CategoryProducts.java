@@ -13,13 +13,15 @@ public class CategoryProducts {
 		POM18 tc=new POM18(driver);
 		tc18.launchApp();
 		tc.categoryVerify();
+		tc18.scrollbutton();
 		tc.womenCategory();
+		tc18.waitTime();
 		tc.dressWomenCategory();
+		tc18.waitTime();
 		tc.categoryProductsPg();
 		tc.menCategory();
-		tc.categoryPage();
-		
-		
+		tc18.waitTime();
+		tc.categoryPage();	
 	}
 
 }

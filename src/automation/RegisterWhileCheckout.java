@@ -16,7 +16,10 @@ public class RegisterWhileCheckout {
 		tc14.waitTime();
 		tc.addToCartBtn();
 		tc14.waitTime();
+		tc.continueShoppingBtn();
 		tc.addToCartSecondProduct();
+		tc14.waitTime();
+		tc.continueShoppingBtn();
 		tc1.cartButton();
 		tc1.cartPageVerify();
 		tc1.proceedToCheckoutBtn();

@@ -16,6 +16,7 @@ public class DownloadInvoiceAfterPO {
 		tc24.launchApp();
 		tc24.waitTime();
 		tc12.addToCartBtn();
+		tc12.continueShoppingBtn();
 		tc14.cartButton();
 		tc14.cartPageVerify();
 		tc14.proceedToCheckoutBtn();

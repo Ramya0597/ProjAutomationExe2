@@ -30,11 +30,11 @@ public class POM6 {
 	WebElement getinTouchUpload;
 	@FindBy(xpath = "//input[@name=\"submit\"]")
 	WebElement getinTouchSubmitbtn;
-	@FindBy(xpath = "//div[@class= \"status alert alert-success\"]")
+	@FindBy(xpath = "//div[@class= 'status alert alert-success']")
 	WebElement getinTouchSuccessAlert;
-	@FindBy(xpath = "//span[text()=\" Home\"]")
+	@FindBy(xpath = " //a[text()=' Home']")
 	WebElement getinTouchHomeBtn;
-	@FindBy(xpath = "//div[@class=\"logo pull-left\"]//child::a[1]//child::img[1]")
+	@FindBy(xpath = "//div[@class='logo pull-left']//child::a[1]//child::img[1]")
 	WebElement logo;
 	
 	

@@ -15,6 +15,7 @@ public class AddProductCart {
 		tc12.launchApp();
 		tc.Products();
 		tc12.waitTime();
+		tc12.scrollbutton();
 		tc1.addToCartBtn();
 		tc1.continueShoppingBtn();
 		tc1.addToCartSecondProduct();

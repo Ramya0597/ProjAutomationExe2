@@ -14,13 +14,13 @@ public class POM19 {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//h2[text()=\"Brands\"]")
+	@FindBy(xpath = "//h2[text()='Brands']")
 	WebElement brands;
-	@FindBy(xpath = "//a[text()=\"H&M\"]")
+	@FindBy(xpath = "//a[text()='H&M']")
 	WebElement hmBrand;
 	@FindBy(xpath = "/html/body/section/div/div[2]/div[2]/div")
 	WebElement brandProducts;
-	@FindBy(xpath = "//a[text()=\"Babyhug\"]")
+	@FindBy(xpath = "//a[text()='Babyhug']")
 	WebElement babyHugBrand;
 	@FindBy(xpath = "/html/body/section/div/div[2]/div[2]/div")
 	WebElement babyHugProducts;

@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automation.SearchProduct">
+      <class name="automation.DownloadInvoiceAfterPO">
         <methods>
-          <include name="searchProduct"/>
+          <include name="registerWhileCheckout"/>
         </methods>
-      </class> <!-- automation.SearchProduct -->
+      </class> <!-- automation.DownloadInvoiceAfterPO -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

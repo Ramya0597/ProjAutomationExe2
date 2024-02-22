@@ -19,7 +19,7 @@ public class ValidEmailandPassword {
 		tc.loginButton();
 		tc2.loggedinUsername();
 		tc2.deleteAccount();
-
+		tc2.accountDeletedVerifyandContinue();
 	}
 
 }

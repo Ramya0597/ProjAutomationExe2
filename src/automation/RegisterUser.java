@@ -21,8 +21,13 @@ public class RegisterUser {
 		tc1.scrollbutton();
 		tc1.accountCreateCheckbox();
 		tc1.addressInform();
+		//tc1.waitTime();
 		tc1.loggedinUsername();
 		tc1.deleteAccount();
+		tc1.waitTime();
+		tc1.accountDeletedVerifyandContinue();
+		tc1.continueBtnHP();
+		
 	}
 
 }

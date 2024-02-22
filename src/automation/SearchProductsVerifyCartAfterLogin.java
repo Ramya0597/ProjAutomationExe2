@@ -18,6 +18,7 @@ public class SearchProductsVerifyCartAfterLogin {
 		tc20.launchApp();
 		tc.Products();
 		tc.allProductsTitle();
+		tc20.scrollbutton();
 		tc2.productSearch();
 		tc2.searchedProducts();
 		tc2.searchSpecificProduct();

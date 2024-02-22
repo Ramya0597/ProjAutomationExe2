@@ -22,7 +22,10 @@ public class LoginBeforeCheckout {
 		tc16.loggedinUsername();
 		tc1.addToCartBtn();
 		tc16.waitTime();
+		tc1.continueShoppingBtn();
 		tc1.addToCartSecondProduct();
+		tc1.continueShoppingBtn();
+		tc16.waitTime();
 		tc2.cartButton();
 		tc2.cartPageVerify();
 		tc2.proceedToCheckoutBtn();

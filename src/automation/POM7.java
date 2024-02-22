@@ -14,9 +14,9 @@ public class POM7 {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath = "//a[text()=\" Test Cases\"]")
+	@FindBy(xpath = "//a[text()=' Test Cases']")
 	WebElement testcasesbtn;
-	@FindBy(xpath = "//h2[@class=\"title text-center\"]")
+	@FindBy(xpath = "//h2[@class='title text-center']")
 	WebElement testcasevisible;
 	
 	public void testcases() {

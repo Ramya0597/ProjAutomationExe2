@@ -14,13 +14,13 @@ public class POM22 {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//h2[text()=\"recommended items\"]")
+	@FindBy(xpath = "//h2[text()='recommended items']")
 	WebElement recommendedItems;
-	@FindBy(xpath = "//*[@id=\"recommended-item-carousel\"]/div/div[2]/div[1]/div/div/div/a")
+	@FindBy(xpath = "//*[@id='recommended-item-carousel']/div/div[2]/div[1]/div/div/div/a")
 	WebElement stylishDressRI;
-	@FindBy(xpath = "//*[@id=\"cartModal\"]/div/div/div[2]/p[2]/a/u")
+	@FindBy(xpath = "//u[text()='View Cart']")
 	WebElement viewCartRI;
-	@FindBy(xpath = "//a[text()=\"Stylish Dress\"]")
+	@FindBy(xpath = "//a[text()='Stylish Dress']")
 	WebElement specificProductRI;
 	
 	

@@ -15,19 +15,19 @@ public class POM18 {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//h2[text()=\"Category\"]")
+	@FindBy(xpath = "//h2[text()='Category']")
 	WebElement category;
-	@FindBy(xpath = "//a[@href=\"#Women\"]")
+	@FindBy(xpath = "//a[@href='#Women']")
 	WebElement women;
-	@FindBy(xpath = "//a[@href=\"/category_products/2\"]")
+	@FindBy(xpath = "//*[@id='Women']//child::div[1]//child::ul[1]//child::li[2]")
 	WebElement tops;
-	@FindBy(xpath = "//h2[text()=\"Women - Tops Products\"]")
+	@FindBy(xpath = "//h2[text()='Women - Tops Products']")
 	WebElement womenTopsTitle;
-	@FindBy(xpath = "//a[@href=\"#Men\"]")
+	@FindBy(xpath = "//a[@href='#Men']")
 	WebElement men;
-	@FindBy(xpath = "//a[text()=\"Tshirts \"]")
+	@FindBy(xpath = "//a[text()='Tshirts ']")
 	WebElement menTshirts;
-	@FindBy(xpath = "//li[text()=\"Men > Tshirts\"]")
+	@FindBy(xpath = "//li[text()='Men > Tshirts']")
 	WebElement menTshirtVerifyPg;
 	
 	

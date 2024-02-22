@@ -14,6 +14,7 @@ public class ViewCartBrandProducts {
 		POM8 tc1=new POM8(driver);
 		tc19.launchApp();
 		tc1.Products();
+		tc19.scrollbutton();
 		tc.brands();
 		tc.subBrand();
 		tc.brandPgAndproduts();

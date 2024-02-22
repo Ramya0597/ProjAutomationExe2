@@ -15,6 +15,7 @@ public class AddReviewOnProduct {
 		tc0.launchApp();
 		tc1.Products();
 		tc1.allProductsTitle();
+		tc0.scrollbutton();
 		tc1.viewProduct();
 		tc.writeYourReviewVisible();  
 		tc.reviewName();

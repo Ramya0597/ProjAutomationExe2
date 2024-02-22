@@ -13,6 +13,7 @@ public class ProductQuantityInCart {
 		POM8 tc=new POM8(driver);
 		POM13 tc1=new POM13(driver);
 		tc13.launchApp();
+		tc13.scrollbutton();
 		tc.viewProduct();
 		tc.productDetailsVisible();
 		tc1.productQuantity();

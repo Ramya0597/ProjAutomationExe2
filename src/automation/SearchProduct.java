@@ -15,7 +15,9 @@ public class SearchProduct {
 		tc9.launchApp();
 		tc.Products();
 		tc.allProductsTitle();
+		tc9.scrollbutton();
 		tc1.productSearch();
+		tc9.scrollbutton();
 		tc1.searchedProducts();
 		tc9.waitTime();
 		tc1.searchSpecificProduct();

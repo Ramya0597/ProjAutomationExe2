@@ -17,7 +17,9 @@ public class RemoveProductsFromCart {
 		tc17.waitTime();
 		tc.addToCartBtn();
 		tc17.waitTime();
+		tc.continueShoppingBtn();
 		tc.addToCartSecondProduct();
+		tc.continueShoppingBtn();
 		tc1.cartButton();
 		tc1.cartPageVerify();
 		tc2.deleteProduct();

@@ -30,7 +30,7 @@ public class POM2 {
 	}
 
 	public void loginEmailid() {
-		loginEmail.sendKeys("ramy132@gmail.com");
+		loginEmail.sendKeys("ramk1v2@gmail.com");
 	}
 
 	public void loginpassword() {

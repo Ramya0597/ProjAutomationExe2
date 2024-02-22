@@ -1,11 +1,14 @@
 package automation;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class POM8 {
 	
@@ -16,32 +19,38 @@ public class POM8 {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath = "//a[text()=\" Products\"]")
+	@FindBy(xpath = "//a[text()=' Products']")
 	WebElement productsBtn;
-	@FindBy(xpath = "//h2[text()=\"All Products\"]")
+	@FindBy(xpath = "//h2[text()='All Products']")
 	WebElement allProductsTitle;
-	@FindBy(xpath = "//div[@class= \"features_items\"]")
+	@FindBy(xpath = "//div[@class= 'features_items']")
 	List<WebElement> allProductsList;
 	@FindBy(xpath = "/html/body/section[2]/div/div/div[2]/div/div[2]/div/div[2]/ul/li/a")
 	WebElement viewProduct;
-	@FindBy(xpath = "//h2[text()=\"Blue Top\"]")
+	@FindBy(xpath = "//h2[text()='Blue Top']")
 	WebElement firstProductName;
-	@FindBy(xpath = "//p[text()=\"Category: Women > Tops\"]")
+	@FindBy(xpath = "//p[text()='Category: Women > Tops']")
 	WebElement firstProductCategory;
-	@FindBy(xpath = "//span[text()=\"Rs. 500\"]")
+	@FindBy(xpath = "//span[text()='Rs. 500']")
 	WebElement firstProductPrice;
-	@FindBy(xpath = "//p[text()=\" In Stock\"]")
+	@FindBy(xpath = "//p[text()=' In Stock']")
 	WebElement firstProductAvailability;
-	@FindBy(xpath = "//p[text()=\" New\"]")
+	@FindBy(xpath = "//p[text()=' New']")
 	WebElement firstProductCondition;
-	@FindBy(xpath = "//p[text()=\" Polo\"]")
+	@FindBy(xpath = "//p[text()=' Polo']")
 	WebElement firstProductBrand;
 	
 	public void Products() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.visibilityOf(productsBtn));
+		driver.navigate().refresh();
 		productsBtn.click();
 	}
 	
 	public void allProductsTitle() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.visibilityOf(allProductsTitle));
+		driver.navigate().refresh();
 		boolean allProducts = allProductsTitle.isDisplayed();
 		System.out.println("user is navigated to ALL PRODUCTS page successfully: " + allProducts);
 	}
@@ -62,6 +71,9 @@ public class POM8 {
 	}
 
 	public void productDetailsVisible() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.visibilityOf(firstProductName));
+		driver.navigate().refresh();
 		boolean product = firstProductName.isDisplayed();
 		System.out.println("product name is Visible: " + product);
 		boolean category = firstProductCategory.isDisplayed();

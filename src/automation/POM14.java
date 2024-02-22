@@ -62,11 +62,12 @@ public class POM14 {
 	}
 	
 	public void addressDetailsCheckout() {
-		deliveryAddress.getText();
-		billingAddress.getText();
-		for (int i = 0; i < tabledata.size(); i++) {
-			System.out.println(tabledata.get(i).getText());
+		  deliveryAddress.getText();
+		  billingAddress.getText();
+		 for (int i = 0; i < tabledata.size(); i++) {
+			System.out.print(tabledata.get(i).getText()+"  ");
 		}
+		System.out.println(" ");
 	}
 	
 	public void commentAndPlaceOrder() {

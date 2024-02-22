@@ -1,14 +1,18 @@
 package automation;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 public class POM {
@@ -74,17 +78,17 @@ public class POM {
 	WebElement zipcode;
 	@FindBy(id = "mobile_number")
 	WebElement mobNumb;
-	@FindBy(xpath = "//button[text()=\"Create Account\"]")
+	@FindBy(xpath = "//button[text()='Create Account']")
 	WebElement createAccountSignup;
 	@FindBy(xpath = "//div[@class=\"col-sm-9 col-sm-offset-1\"]//child::h2[1]//child::b[1]")
 	WebElement accountCreatedMsg;
-	@FindBy(xpath = "//a[text()=\"Continue\"]")
+	@FindBy(xpath = "//a[text()='Continue']")
 	WebElement accountCreatedContinue;
-	@FindBy(xpath = "//u[text()=\"Register / Login\"]")
+	@FindBy(xpath = "//u[text()='Register / Login']")
 	WebElement registerLogin;
-	@FindBy(xpath = "//b[text()=\"Account Deleted!\"]")
+	@FindBy(xpath = "//b[text()='Account Deleted!']")
 	WebElement accountDeletedMsg;
-	@FindBy(xpath = "//a[text()=\"Continue\"]")
+	@FindBy(xpath = "//a[text()='Continue']")
 	WebElement continueBtnDeleteUser;
 	
 	public void launchApp() {
@@ -99,10 +103,32 @@ public class POM {
 		driver.navigate().to("https://automationexercise.com/");
 		String title = driver.getTitle();
 		System.out.println(title);
+		/*
+		 * WindowHandling wh=new WindowHandling(driver); wh.switchWindow();
+		 */
 	}
 
 	public void signuporloginbtn() {
 		signuporlogin.click();
+		WindowHandling wh=new WindowHandling(driver);
+		wh.switchWindow();
+	}
+	
+	public void signupvisible() {
+		boolean text = signup.isDisplayed();
+		System.out.println("New User Signup! is visible: " + text);
+	}
+
+	public void signupName() {
+		signupName.sendKeys("Ram");
+	}
+
+	public void signupEmailid() {
+		signupEmail.sendKeys("ramopt40@gmail.com");
+	}
+
+	public void signupbtn() {
+		signupbutton.click();
 	}
 
 	public void accountInfoVerify() {
@@ -139,13 +165,32 @@ public class POM {
 		zipcode.sendKeys("500032");
 		mobNumb.sendKeys("9876543210");
 		createAccountSignup.click();
+		/*
+		 * WindowHandling wh=new WindowHandling(driver); wh.switchWindow();
+		 * wh.switchWindow();
+		 */
+		/*
+		 * WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		 * wait.until(ExpectedConditions.visibilityOf(accountCreatedMsg));
+		 * driver.navigate().refresh();
+		 */
 		boolean acntCreated = accountCreatedMsg.isDisplayed();
 		System.out.println("Account created : " + acntCreated);
+		/* wh.switchWindow(); */
+		 driver.navigate().refresh();
+		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		 wait.until(ExpectedConditions.visibilityOf(accountCreatedContinue));
 		accountCreatedContinue.click();
+		/* wh.switchWindow(); */
+		/* driver.navigate().refresh(); */
 	}
 
 	public void loggedinUsername() {
-		String username = name.getText();
+		/*
+		 * WindowHandling wh=new WindowHandling(driver); wh.switchWindow();
+		 */
+		driver.navigate().refresh();
+		String username = name.getText();		
 		boolean loggedin = loggedinUsername.isDisplayed();
 		System.out.println("Loggedin " + username + " displayed: " + loggedin);
 	}
@@ -157,23 +202,6 @@ public class POM {
 	public void alert() {
 		Alert a = driver.switchTo().alert();
 		a.accept();
-	}
-
-	public void signupvisible() {
-		boolean text = signup.isDisplayed();
-		System.out.println("New User Signup! is visible: " + text);
-	}
-
-	public void signupName() {
-		signupName.sendKeys("Ram");
-	}
-
-	public void signupEmailid() {
-		signupEmail.sendKeys("ramy1002@gmail.com");
-	}
-
-	public void signupbtn() {
-		signupbutton.click();
 	}
 
 	public void scrollbutton() {
@@ -200,10 +228,21 @@ public class POM {
 	}
 
 	public void accountDeletedVerifyandContinue() {
+		/*
+		 * WindowHandling wh=new WindowHandling(driver); wh.switchWindow();
+		 */
+		/*
+		 * WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+		 * wait.until(ExpectedConditions.visibilityOf(accountDeletedMsg));
+		 * driver.navigate().refresh();
+		 */
 		String actMsg = accountDeletedMsg.getText();
 		System.out.println(actMsg);
 		String expMsg = "ACCOUNT DELETED!";
 		Assert.assertEquals(actMsg, expMsg);
+	}
+	
+	public void continueBtnHP() {
 		continueBtnDeleteUser.click();
 	}
 

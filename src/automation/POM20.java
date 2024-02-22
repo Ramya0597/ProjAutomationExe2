@@ -16,11 +16,11 @@ public class POM20 {
 		PageFactory.initElements(driver, this);
 	}
 		
-	@FindBy(xpath = "//i[@class=\"fa fa-shopping-cart\"]")
+	@FindBy(xpath = "//i[@class='fa fa-shopping-cart']")
 	List<WebElement> addToCartAllProducts;
-	@FindBy(xpath = "//button[text()=\"Continue Shopping\"]")
+	@FindBy(xpath = "//button[text()='Continue Shopping']")
 	WebElement continueShopping;
-	@FindBy(xpath = "//table[@id=\"cart_info_table\"]")
+	@FindBy(xpath = "//table[@id='cart_info_table']")
 	List<WebElement> specificProductInCart;
 	
 	public void addAllProductsToCart() {

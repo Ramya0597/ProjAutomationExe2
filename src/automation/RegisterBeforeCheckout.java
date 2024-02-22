@@ -26,7 +26,9 @@ public class RegisterBeforeCheckout {
 		tc15.loggedinUsername();
 		tc.addToCartBtn();
 		tc15.waitTime();
+		tc.continueShoppingBtn();
 		tc.addToCartSecondProduct();
+		tc.continueShoppingBtn();
 		tc1.cartButton();
 		tc1.cartPageVerify();
 		tc1.proceedToCheckoutBtn();

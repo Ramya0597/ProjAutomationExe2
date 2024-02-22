@@ -25,6 +25,7 @@ public class AddressDetailsCheckoutPage {
 		tc23.addressInform();
 		tc23.loggedinUsername();
 		tc12.addToCartBtn();
+		tc12.continueShoppingBtn();
 		tc14.cartButton();
 		tc14.cartPageVerify();
 		tc14.proceedToCheckoutBtn();
